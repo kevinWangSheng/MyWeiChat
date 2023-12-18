@@ -1,5 +1,5 @@
 ## 基础逻辑
-![img.png](/assert/imgs/architecture.png)
+![architecutre.png](assert%2Fimgs%2Farchitecutre.png)
 当发送消息，添加好友的时候，通过点击传递到客户端client，然后通过客户端发送对应的消息类型，比方说添加好友，发送消息，发送群消息等消息，然后在channel中进行对应的处理工作，在把他发送传递给服务器，服务器响应完成之后同样的发送对应的response类型传递回客户端。
 
 
