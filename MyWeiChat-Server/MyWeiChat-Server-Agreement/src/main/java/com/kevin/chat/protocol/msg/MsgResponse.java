@@ -18,6 +18,13 @@ public class MsgResponse extends Packet {
 
     private Date msgDate;
 
+    public MsgResponse(String friendId, String msgText, Integer msgType, Date msgDate) {
+        this.friendId = friendId;
+        this.msgText = msgText;
+        this.msgType = msgType;
+        this.msgDate = msgDate;
+    }
+
     @Override
     public Byte getCommand() {
         return Command.MsgResponse;

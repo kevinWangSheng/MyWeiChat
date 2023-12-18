@@ -9,11 +9,11 @@ import java.util.List;
  */
 public class ChatTalkDto {
     private String talkId;
-    private String talkType; // 聊天类型，0好友，1群组
+    private Integer talkType; // 聊天类型，0好友，1群组
 
-    private String userNickName; // 用户昵称
+    private String talkName; // 用户昵称
 
-    private String userHead; // 用户头像
+    private String talkHead; // 用户头像
 
     private String talkSketch;  // 消息简述
     private Date talkDate;      // 消息时间
@@ -29,28 +29,28 @@ public class ChatTalkDto {
         this.talkId = talkId;
     }
 
-    public String getTalkType() {
+    public Integer getTalkType() {
         return talkType;
     }
 
-    public void setTalkType(String talkType) {
+    public void setTalkType(Integer talkType) {
         this.talkType = talkType;
     }
 
-    public String getUserNickName() {
-        return userNickName;
+    public String getTalkName() {
+        return talkName;
     }
 
-    public void setUserNickName(String userNickName) {
-        this.userNickName = userNickName;
+    public void setTalkName(String userTalkName) {
+        this.talkName = userTalkName;
     }
 
-    public String getUserHead() {
-        return userHead;
+    public String getTalkHead() {
+        return talkHead;
     }
 
-    public void setUserHead(String userHead) {
-        this.userHead = userHead;
+    public void setTalkHead(String talkHead) {
+        this.talkHead = talkHead;
     }
 
     public String getTalkSketch() {
