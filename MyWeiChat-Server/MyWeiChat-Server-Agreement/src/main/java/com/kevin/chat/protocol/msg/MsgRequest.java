@@ -20,6 +20,14 @@ public class MsgRequest extends Packet {
 
     private Date msgDate;
 
+    public MsgRequest(String msgText, String userId, String friendId, Integer msgType, Date msgDate) {
+        this.msgText = msgText;
+        this.userId = userId;
+        this.friendId = friendId;
+        this.msgType = msgType;
+        this.msgDate = msgDate;
+    }
+
     @Override
     public Byte getCommand() {
         return Command.MsgRequest;

@@ -1,5 +1,6 @@
 package org.itstack.naive.chat.ui.view.chat;
 
+
 import javafx.collections.ObservableList;
 import javafx.scene.Node;
 import javafx.scene.control.Label;

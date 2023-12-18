@@ -29,6 +29,7 @@ public class NettyServer implements Callable<Channel> {
     private final EventLoopGroup parentGroup = new NioEventLoopGroup(2);
     private final EventLoopGroup childGroup = new NioEventLoopGroup();
     private Channel channel;
+    public int port = 7397;
 
     public NettyServer(UserService userService){
         this.userService = userService;
@@ -44,7 +45,8 @@ public class NettyServer implements Callable<Channel> {
                     .option(ChannelOption.SO_BACKLOG, 128)
                     .childHandler(new MyChannelInitializer(userService));
 
-            channelFuture = b.bind(new InetSocketAddress(7397)).syncUninterruptibly();
+
+            channelFuture = b.bind(new InetSocketAddress(port)).syncUninterruptibly();
             this.channel = channelFuture.channel();
         } catch (Exception e) {
             logger.error("socket server start error", e.getMessage());

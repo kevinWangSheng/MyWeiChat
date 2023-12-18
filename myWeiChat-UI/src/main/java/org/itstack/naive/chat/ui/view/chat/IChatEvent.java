@@ -1,5 +1,7 @@
 package org.itstack.naive.chat.ui.view.chat;
 
+
+
 import javafx.scene.control.ListView;
 import javafx.scene.layout.Pane;
 
